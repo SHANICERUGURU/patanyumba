@@ -1,4 +1,5 @@
 import React from "react";
+import Navbar from "./navbar";
 import HouseCard from "./housecard";
 import houseimg1 from "../assets/house1.jpg"
 import houseimg2 from "../assets/house2.jpg"
@@ -47,12 +48,14 @@ const CardsContainer = () => {
 ]
   return (
     <>
+     <Navbar/>
       <div className="container houseContainer text-center">
         <h1>Get Your Dream Home</h1>
         <div className="row align-items-start">
          {
           houses.map((house,index)=>{
             return(
+            
               <div className="col-md-3"key={index}>
                 <HouseCard house={house}/>
               </div>
