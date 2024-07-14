@@ -1,7 +1,7 @@
 import React from "react";
 import Modal from "./modal";
 const Navbar = () => {
-  return (
+return (
     <>
       <nav className="navbar bg-body-tertiary">
         <div className="container-fluid" style={{ backgroundColor: 'tan' }}>
