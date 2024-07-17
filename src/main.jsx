@@ -8,11 +8,25 @@ import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Landingpage from './components/landingpage.jsx';
 import CardsContainer from './components/CardsContainer.jsx';
+import Login from './components/login.jsx';
+import Register from './components/register.jsx';
 const router= createBrowserRouter([
   {
     path:'/',
-    element: <CardsContainer/>
-  }
+    element: <App/>
+  },
+  {
+    path:'/home',
+    element: <App/>
+  },
+  {
+    path:'/login',
+    element: <Login/>
+  },
+  {
+    path:'/register',
+    element: <Register/>
+  },
 ])
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

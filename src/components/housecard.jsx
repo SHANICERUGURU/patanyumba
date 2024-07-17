@@ -18,10 +18,10 @@ const HouseCard = ({ house }) => {
     {
       house?
       <div className="card" style={{ width: '18rem', marginTop: '15px' }}>
-        <img src={ house ? house.img :"..."} className="card-img-top" alt="..." />
+        <img src={ house ? house.imageUrl :"..."} className="card-img-top" alt="..." />
         <div className="card-body">
 
-          <h5 className="card-title">{house.housetitle}</h5>
+          <h5 className="card-title">{house.housesize}</h5>
           <h4 className="card-title">{house.price}kshs</h4>
           <h4 className="card-title">location:{house.location}</h4>
           <p>Category:{house.price>100000? "expensive":"cheap"}</p>

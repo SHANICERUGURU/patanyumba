@@ -5,8 +5,7 @@ import CardsContainer from './components/CardsContainer'
 function App() {
   return (
     <>
-      <Navbar />
-      <CardsContainer />
+     <CardsContainer />
     </>
   )
 }

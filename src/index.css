@@ -74,3 +74,14 @@ button:focus-visible {
 .error-message{
   color: rgb(214, 14, 14);
 }
+
+.form-area{
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 50px;
+  border-radius: 5px;
+  background-color: #E3F2FD;
+  width: 60%;
+}
+.links{
+  display: grid;
+}
