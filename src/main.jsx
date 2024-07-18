@@ -10,6 +10,7 @@ import Landingpage from './components/landingpage.jsx';
 import CardsContainer from './components/CardsContainer.jsx';
 import Login from './components/login.jsx';
 import Register from './components/register.jsx';
+import UpdateHouse from './components/updatehouse.jsx';
 const router= createBrowserRouter([
   {
     path:'/',
@@ -26,6 +27,10 @@ const router= createBrowserRouter([
   {
     path:'/register',
     element: <Register/>
+  },
+  {
+    path:'/updatehouse',
+    element: <UpdateHouse/>
   },
 ])
 ReactDOM.createRoot(document.getElementById('root')).render(

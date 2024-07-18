@@ -1,12 +1,6 @@
 import React,{useEffect} from "react";
 import Navbar from "./navbar";
 import HouseCard from "./housecard";
-import houseimg1 from "../assets/house1.jpg"
-import houseimg2 from "../assets/house2.jpg"
-import houseimg3 from "../assets/house3.jpg"
-import houseimg4 from "../assets/house4.jpg"
-import houseimg5 from "../assets/house5.jpg"
-import houseimg6 from "../assets/house6.jpg"
 import { getDatabase,ref,get } from "firebase/database";
 import app from "../firebaseconfig";
 import { useState } from "react";
@@ -19,8 +13,15 @@ const [houses,setHouses]=useState([])
       const snapshot=await get(dbRef);
       if (snapshot.exists()){
         let data=Object.values(snapshot.val())
-        setHouses(data)
-        console.log(data);
+
+        let objectWithKeys=Object.keys(data).map((key)=>{
+          return{
+            ...data[key],
+            houseId:key,
+          }
+        })
+        console.log(objectWithKeys);
+        setHouses(objectWithKeys)
       }
     }
     getData()

@@ -1,12 +1,13 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 const HouseCard = ({ house }) => {
 
   let [housetitle, setHousetitle] = useState(house.housetitle)
-  let [price, setPrice] = useState(house.price)
+  let [prize, setprize] = useState(house.prize)
   let [location, setLocation] = useState(house.location)
   let [likes, likesNo] = useState(8)
-  function changePrice() {
-    setPrice(400000)
+  function changeprize() {
+    setprize(400000)
     setLocation("syokimau")
     setHousetitle("mansion")
   }
@@ -22,11 +23,11 @@ const HouseCard = ({ house }) => {
         <div className="card-body">
 
           <h5 className="card-title">{house.housesize}</h5>
-          <h4 className="card-title">{house.price}kshs</h4>
+          <h4 className="card-title">{house.prize}kshs</h4>
           <h4 className="card-title">location:{house.location}</h4>
-          <p>Category:{house.price>100000? "expensive":"cheap"}</p>
+          <p>Category:{house.prize>100000? "expensive":"cheap"}</p>
           <h4>likes:{likes}</h4>
-          <button type="button" class="btn btn-light" onClick={changePrice}>get house</button>
+          < Link to={'/updatehouse'}  type="button" class="btn btn-light" onClick={changeprize} state={house}>update house</Link>
           <button type="button" class="btn btn-warning" onClick={incLikes}>like!!</button>
         </div>
       </div>
